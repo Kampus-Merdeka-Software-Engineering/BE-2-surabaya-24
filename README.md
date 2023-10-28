@@ -1,4 +1,5 @@
-Section Surabaya BE Group 24
+Section Surabaya BE Group 24 :
+
 1. Nur Azzizah
 2. Akhmad Fadhel
 3. Nisrina Nurhasna
