@@ -1,22 +1,22 @@
-"use strict";
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("feedbacks", {
+    await queryInterface.createTable("Feedback", {
       feedbackId: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      feedbacktName: {
+      feedbackName: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       feedbackEmail: {
         type: Sequelize.STRING,
       },
       feedbackComment: {
         type: Sequelize.TEXT,
+        allowNull: false,
       },
       feedbackImg: {
         type: Sequelize.STRING,
@@ -32,6 +32,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("feedbacks");
+    await queryInterface.dropTable("Feedback");
   },
 };
