@@ -6,7 +6,14 @@ const unprotectedRoute = require("./routes/unprotected.route");
 const app = express();
 
 //CORS policy for localhost:5173 (React app) to access this server (Express app)
-app.use(cors({ origin: ['http://127.0.0.1:5500'], credentials: true }))
+app.use(
+  cors({
+    origin: [
+      "https://kampus-merdeka-software-engineering.github.io/FE-2-surabaya-24/",
+    ],
+    credentials: true,
+  })
+);
 
 //Parsing body to JSON
 app.use(express.json());
@@ -35,7 +42,7 @@ app.get("/", (req, res) => {
 
 //Start the server
 app.listen(3000, () => {
-  console.log("Ozone server listening on port: ",3000);
+  console.log("Tevo24 server listening on port: ",3000);
 });
 
 //Test database connection
