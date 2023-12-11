@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       Discount: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.STRING,
       },
       DesInfo: {
         type: Sequelize.TEXT,

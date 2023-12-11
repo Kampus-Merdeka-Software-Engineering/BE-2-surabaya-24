@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
       stock: DataTypes.INTEGER,
       ProductImg: DataTypes.STRING,
       CategoryName: DataTypes.STRING,
-      Discount: DataTypes.FLOAT,
+      Discount: DataTypes.STRING,
       DesInfo: DataTypes.TEXT,
       createdAt: {
         allowNull: false,

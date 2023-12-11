@@ -14,7 +14,7 @@ module.exports = {
           DescProduct: "Green Tea, Health Infused with Every Breath",
           stock: 130,
           ProductImg: "httpngps://iili.io/JzNA8Wx.",
-          Discount: "10%",
+          Discount: "10",
           CategoryName: "Origin Tea",
           DesInfo:
             "Green tea is a lightly oxidized tea from Camellia sinensis leaves, valued for its fresh taste and potential health benefits due to antioxidants and polyphenols. Popular types include Japanese Sencha and Chinese Longjing, enjoyed globally in various forms for its refreshing flavor and health potential.",
@@ -111,7 +111,7 @@ module.exports = {
           DescProduct: "Green Tea, Health Infused with Every Breath",
           stock: 130,
           ProductImg: "https://iili.io/JzNEx2f.png",
-          Discount: "5%",
+          Discount: "5",
           CategoryName: "Sweet Tea",
           DesInfo:
             "Green tea is a lightly oxidized tea from Camellia sinensis leaves, valued for its fresh taste and potential health benefits due to antioxidants and polyphenols. Popular types include Japanese Sencha and Chinese Longjing, enjoyed globally in various forms for its refreshing flavor and health potential.",
