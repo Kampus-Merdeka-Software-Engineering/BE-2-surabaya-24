@@ -6,14 +6,14 @@ const unprotectedRoute = require("./routes/unprotected.route");
 const app = express();
 
 //CORS policy for localhost:5173 (React app) to access this server (Express app)
-app.use(
-  cors({
-    origin: [
-      "https://kampus-merdeka-software-engineering.github.io/FE-2-surabaya-24/",
-    ],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "https://kampus-merdeka-software-engineering.github.io/FE-2-surabaya-24/",
+//     ],
+//     credentials: true,
+//   })
+// );
 
 //Parsing body to JSON
 app.use(express.json());

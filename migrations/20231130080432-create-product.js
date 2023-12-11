@@ -28,7 +28,8 @@ module.exports = {
         type: Sequelize.STRING,
       },
       Discount: {
-        type: Sequelize.STRING,
+        type: Sequelize.DECIMAL,
+        allowNull: true,
       },
       DesInfo: {
         type: Sequelize.TEXT,

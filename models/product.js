@@ -8,15 +8,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.Desserts = Product.hasMany(models.Desserts, {
-        onDelete: "CASCADE",
-        onUpdate: "CASCADE",
-        foreignKey: {
-          name: "productId",
-          type: DataTypes.INTEGER,
-          allowNull: false,
-        },
-      });
       this.Order = Product.hasMany(models.Order, {
         onDelete: "CASCADE",
         onUpdate: "CASCADE",
@@ -42,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       stock: DataTypes.INTEGER,
       ProductImg: DataTypes.STRING,
       CategoryName: DataTypes.STRING,
-      Discount: DataTypes.STRING,
+      Discount: DataTypes.DECIMAL,
       DesInfo: DataTypes.TEXT,
       createdAt: {
         allowNull: false,
