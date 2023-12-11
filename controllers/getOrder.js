@@ -1,16 +1,12 @@
-const { Product } = require("../models");
+// controllers/getFeedback.js
 const { Order } = require("../models");
 
 async function getOrderDetail(req, res) {
-  const detailOrder = await Product.findOne({
-    where: { productId: req.params.productId },
-    include: { model: Order},
-  });
-
+  const order = await Order.findAll();
   const response = {
     code: 200,
     status: "Ok",
-    data: detailOrder,
+    data: order,
   };
   return res.status(response.code).json(response);
 }

@@ -3,10 +3,9 @@ const express = require("express");
 const router = express.Router();
 const { Feedback } = require("../models");
 
-router.post("/submit-feedback", async (req, res) => {
+router.post("/submitFeedback", async (req, res) => {
   try {
     const {
-      feedbackId,
       feedbackName,
       feedbackEmail,
       feedbackComment,
@@ -19,7 +18,6 @@ router.post("/submit-feedback", async (req, res) => {
     }
 
     const newFeedback = await Feedback.create({
-      feedbackId,
       feedbackName,
       feedbackEmail,
       feedbackComment,

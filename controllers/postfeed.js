@@ -1,69 +1,35 @@
-// controllers/postfeed.js
 const { Feedback } = require("../models");
 
 async function postfeed(req, res) {
   try {
-    const newFeedback = await Feedback.create({
-      feedbackId: req.body.feedbackId,
-      feedbackName: req.body.feedbackName,
-      feedbackEmail: req.body.feedbackEmail,
-      feedbackComment: req.body.feedbackComment,
-      feedbackImg: req.body.feedbackImg,
+    const { feedbackName, feedbackEmail, feedbackComment, feedbackImg } =
+      req.body;
+    console.log(req.body);
+
+    const feedback = await Feedback.create({
+      feedbackName,
+      feedbackEmail,
+      feedbackComment,
+      feedbackImg,
     });
 
-    
+    const response = {
+      code: 201,
+      status: "Created",
+      data: feedback,
+    };
 
-    res.status(201).json({
-      message: "Feedback submitted successfully",
-      feedback: newFeedback,
-    });
+    return res.status(response.code).json(response);
   } catch (error) {
-    console.error("Error submitting feedback:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error(error);
+    return res.status(500).json({
+      code: 500,
+      status: "Internal Server Error",
+      message: "An error occurred while processing your request",
+    });
   }
 }
 
 module.exports = {
   postfeed,
 };
-
-// // controllers/postfeed.js
-// const { Feedback } = require("../models");
-
-// async function postfeed(req, res) {
-//   try {
-//     const{
-//       feedbackId,
-//       feedbackName,
-//       feedbackEmail,
-//       feedbackComment,
-//       feedbackImg,
-//     } = req.body;
-
-//     if (!feedbackName || !feedbackComment) {
-//       return res.status(400).json({ error: "Incomplete data" });
-//     }
-
-//     const newFeedback = await Feedback.create({
-//       feedbackId,
-//       feedbackName,
-//       feedbackEmail,
-//       feedbackComment,
-//       feedbackImg,
-//     });
-
-//     console.log("New feedback inserted:", newFeedback);
-
-//     res.status(201).json({
-//       message: "Feedback submitted successfully",
-//       feedback: newFeedback,
-//     });
-//   } catch (error) {
-//     console.error("Error submitting feedback:", error);
-//     res.status(500).json({ error: "Internal Server Error" });
-//   }
-// }
-
-// module.exports = {
-//   postfeed,
-// };
