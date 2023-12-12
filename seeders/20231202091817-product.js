@@ -12,7 +12,7 @@ module.exports = {
           priceProduct: 15,
           DescProduct: "Green Tea, Health Infused with Every Breath",
           stock: 130,
-          ProductImg: "httpngps://iili.io/JzNA8Wx.",
+          ProductImg: "httpngps://iili.io/JzNA8Wx",
           Discount: 10,
           CategoryName: "Origin Tea",
           DesInfo:
