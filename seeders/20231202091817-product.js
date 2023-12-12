@@ -12,7 +12,7 @@ module.exports = {
           priceProduct: 15,
           DescProduct: "Green Tea, Health Infused with Every Breath",
           stock: 130,
-          ProductImg: "httpngps://iili.io/JzNA8Wx.png",
+          ProductImg: "https://iili.io/JzNAgfV.png",
           Discount: 10,
           CategoryName: "Origin Tea",
           DesInfo:
@@ -115,7 +115,7 @@ module.exports = {
           DescProduct:
             "A delicate blend of sweet and spicy Thai Tea with blue pearls from the Thai blue orchid flower.",
           stock: 28,
-          ProductImg: "https://iili.io/JzNEx2f.png",
+          ProductImg: "https://iili.io/JzNETp2.png",
           CategoryName: "SweeTea",
           DesInfo:
             "The traditional Thai tea combined with pearls of natural blue color from Thai orchid flower. Enjoy the authentic taste that gives you a calming effect and harmonizes your emotions.",
