@@ -1,13 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const unprotectedRoute = require("./routes/unprotected.route");
+// const { testDatabaseConnection } = require("./utils/testDbConnection");
 
 const app = express();
 
-app.use(
-  cors({})
-);
+//CORS policy for localhost:5173 (React app) to access this server (Express app)
+// app.use(
+//   cors({})
+// );
 
+//Parsing body to JSON
 app.use(express.json());
 
 const { createProxyMiddleware } = require("http-proxy-middleware");
@@ -37,7 +40,7 @@ app.use("/", unprotectedRoute);
 
 //hello world
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! Hello Eperibodi");
 });
 
 //Start the server
