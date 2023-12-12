@@ -1,18 +1,23 @@
 const express = require("express");
 const cors = require("cors");
 const unprotectedRoute = require("./routes/unprotected.route");
-// const { testDatabaseConnection } = require("./utils/testDbConnection");
 
 const app = express();
 
-//CORS policy for localhost:5173 (React app) to access this server (Express app)
 app.use(
   cors({})
 );
 
-//Parsing body to JSON
 app.use(express.json());
 
+const { createProxyMiddleware } = require("http-proxy-middleware");
+app.use(
+  "/external-server",
+  createProxyMiddleware({
+    target: "https://kind-jade-jay-gown.cyclic.app",
+    changeOrigin: true,
+  })
+);
 
 app.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/json')
@@ -32,7 +37,7 @@ app.use("/", unprotectedRoute);
 
 //hello world
 app.get("/", (req, res) => {
-  res.send("Hello World! Hello Eperibodi");
+  res.send("Hello World!");
 });
 
 //Start the server
