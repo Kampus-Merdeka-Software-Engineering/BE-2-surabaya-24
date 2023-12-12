@@ -6,7 +6,18 @@ module.exports = {
     await queryInterface.bulkInsert(
       "products",
       [
-       
+        {
+          // OriginTea
+          nameProduct: "Green Tea",
+          priceProduct: 15,
+          DescProduct: "Green Tea, Health Infused with Every Breath",
+          stock: 130,
+          ProductImg: "https://iili.io/JzNAgfV.png",
+          Discount: 10,
+          CategoryName: "Origin Tea",
+          DesInfo:
+            "Green tea is a lightly oxidized tea from Camellia sinensis leaves, valued for its fresh taste and potential health benefits due to antioxidants and polyphenols. Popular types include Japanese Sencha and Chinese Longjing, enjoyed globally in various forms for its refreshing flavor and health potential.",
+        },
         {
           nameProduct: "Oolong",
           priceProduct: 13,
