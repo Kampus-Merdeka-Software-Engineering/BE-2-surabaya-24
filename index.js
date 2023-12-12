@@ -6,9 +6,9 @@ const unprotectedRoute = require("./routes/unprotected.route");
 const app = express();
 
 //CORS policy for localhost:5173 (React app) to access this server (Express app)
-// app.use(
-//   cors({})
-// );
+app.use(
+  cors({})
+);
 
 //Parsing body to JSON
 app.use(express.json());
@@ -17,7 +17,8 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 app.use(
   "/external-server",
   createProxyMiddleware({
-    target: "https://kind-jade-jay-gown.cyclic.app",
+    target:
+      "https://kind-jade-jay-gown.cyclic.apphttps://kind-jade-jay-gown.cyclic.app/product",
     changeOrigin: true,
   })
 );
